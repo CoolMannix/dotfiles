@@ -1,0 +1,10 @@
+.netrwhist
+*.swp
+vimrc.local
+vimrc.before
+vimrc.after
+spell/*
+bundle/
+plugged/
+autoload/plug.vim*
+view/
