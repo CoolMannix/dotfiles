@@ -32,7 +32,7 @@ set tm=500
 
 
 " show location
-set cursorcolumn
+" set cursorcolumn
 set cursorline
 
 
