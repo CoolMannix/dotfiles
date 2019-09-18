@@ -3,6 +3,7 @@
 " Specify a directory for plugins
 " - For Neovim: ~/.local/share/nvim/plugged
 " - Avoid using standard Vim directory names like 'plugin'
+" 移动光标到插件名上, 使用'#'快速跳转到每个插件的配置处
 call plug#begin('~/.vim/plugged')
 
 " Make sure you use single quotes
@@ -28,28 +29,39 @@ Plug 'lervag/vimtex'
 " Initialize plugin system
 call plug#end()
 
+" vim-easy-align {{{
 " Start interactive EasyAlign in visual mode (e.g. vipga)
 xmap ga <Plug>(EasyAlign)
-
 " Start interactive EasyAlign for a motion/text object (e.g. gaip)
 nmap ga <Plug>(EasyAlign)
+" }}}
 
+" nerdtree {{{
 map <C-n> :NERDTreeToggle<CR>
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
 autocmd StdinReadPre * let s:std_in=1
 autocmd VimEnter * if argc() == 1 && isdirectory(argv()[0]) && !exists("s:std_in") | exe 'NERDTree' argv()[0] | wincmd p | ene | exe 'cd '.argv()[0] | endif
+" }}}
 
+" tarbar {{{
 nmap <F8> :TagbarToggle<CR>
-let g:rustfmt_autosave = 1
+" }}}
 
+" rust.vim {{{
+let g:rustfmt_autosave = 1
+" }}}
+
+" ultisnips {{{
 " Trigger configuration. Do not use <tab> if you use https://github.com/Valloric/YouCompleteMe.
 let g:UltiSnipsExpandTrigger="<tab>"
 let g:UltiSnipsJumpForwardTrigger="<c-b>"
 let g:UltiSnipsJumpBackwardTrigger="<c-z>"
+" }}}
 
-" lervag/vimtex config
+" vimtex {{{
 let g:tex_flavor='latex'
 let g:vimtex_view_method='zathura'
 let g:vimtex_quickfix_mode=0
 set conceallevel=1
 let g:tex_conceal='abdmg'
+" }}}
