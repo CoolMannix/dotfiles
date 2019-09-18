@@ -22,6 +22,7 @@ Plug 'SirVer/ultisnips'
 Plug 'honza/vim-snippets'
 Plug 'rust-lang/rust.vim'
 Plug 'majutsushi/tagbar'
+Plug 'lervag/vimtex'
 " auto ctags
 " Plug 'ludovicchabant/vim-gutentags'
 " Initialize plugin system
@@ -45,3 +46,10 @@ let g:rustfmt_autosave = 1
 let g:UltiSnipsExpandTrigger="<tab>"
 let g:UltiSnipsJumpForwardTrigger="<c-b>"
 let g:UltiSnipsJumpBackwardTrigger="<c-z>"
+
+" lervag/vimtex config
+let g:tex_flavor='latex'
+let g:vimtex_view_method='zathura'
+let g:vimtex_quickfix_mode=0
+set conceallevel=1
+let g:tex_conceal='abdmg'
