@@ -24,6 +24,7 @@ Plug 'honza/vim-snippets'
 Plug 'rust-lang/rust.vim'
 Plug 'majutsushi/tagbar'
 Plug 'lervag/vimtex'
+Plug 'leafgarland/typescript-vim'
 " auto ctags
 " Plug 'ludovicchabant/vim-gutentags'
 " Initialize plugin system

@@ -6,5 +6,6 @@ vimrc.after
 spell/*
 bundle/
 plugged/
+colors/
 autoload/plug.vim*
 view/
