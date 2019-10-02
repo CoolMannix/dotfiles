@@ -2,6 +2,8 @@
 let mapleader = ','
 let g:mapleader = ','
 
+set encoding=utf-8
+
 " syntax
 syntax on
 

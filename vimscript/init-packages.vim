@@ -27,6 +27,14 @@ Plug 'lervag/vimtex'
 Plug 'leafgarland/typescript-vim'
 " auto ctags
 " Plug 'ludovicchabant/vim-gutentags'
+
+if has('nvim')
+  Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
+else
+" Plug 'Shougo/deoplete.nvim'
+" Plug 'roxma/nvim-yarp'
+" Plug 'roxma/vim-hug-neovim-rpc'
+endif
 " Initialize plugin system
 call plug#end()
 
@@ -65,4 +73,10 @@ let g:vimtex_view_method='zathura'
 let g:vimtex_quickfix_mode=0
 set conceallevel=1
 let g:tex_conceal='abdmg'
+" }}}
+
+" deoplete {{{
+if has('nvim')
+  let g:deoplete#enable_at_startup = 1
+endif
 " }}}
