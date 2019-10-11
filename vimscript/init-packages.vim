@@ -35,6 +35,8 @@ else
 " Plug 'roxma/nvim-yarp'
 " Plug 'roxma/vim-hug-neovim-rpc'
 endif
+
+Plug 'dense-analysis/ale'
 " Initialize plugin system
 call plug#end()
 

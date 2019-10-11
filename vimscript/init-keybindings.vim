@@ -82,3 +82,8 @@ map <Left> <Nop>
 map <Right> <Nop>
 map <Up> <Nop>
 map <Down> <Nop>
+
+" 针对neovim的处理
+if has('nvim')
+  tnoremap <Esc> <C-\><C-n>
+endif
