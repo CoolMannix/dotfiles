@@ -9,3 +9,4 @@ plugged/
 colors/
 autoload/plug.vim*
 view/
+tmux/.tumx/resurrect/
