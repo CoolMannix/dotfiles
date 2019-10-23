@@ -37,6 +37,8 @@ else
 endif
 
 Plug 'dense-analysis/ale'
+
+Plug 'Raimondi/delimitMate'
 " Initialize plugin system
 call plug#end()
 
