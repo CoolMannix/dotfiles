@@ -39,6 +39,9 @@ endif
 Plug 'dense-analysis/ale'
 
 Plug 'Raimondi/delimitMate'
+
+Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
 " Initialize plugin system
 call plug#end()
 
