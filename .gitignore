@@ -10,3 +10,8 @@ colors/
 autoload/plug.vim*
 view/
 tmux/.tumx/resurrect/
+tmux/.tmux/plugins/tmux-resurrect/
+tmux/.tmux/plugins/tmux-continuum/
+tmux/.tmux/plugins/tmux-sensible/
+tmux/.tmux/plugins/tpm/
+tmux/.tmux/resurrect/
