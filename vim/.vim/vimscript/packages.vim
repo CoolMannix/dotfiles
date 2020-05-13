@@ -30,6 +30,11 @@ Plug 'leafgarland/typescript-vim'
 
 if has('nvim')
   Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
+  " rust rls
+  Plug 'prabirshrestha/async.vim'
+  Plug 'prabirshrestha/vim-lsp'
+  Plug 'mattn/vim-lsp-settings'
+  Plug 'lighttiger2505/deoplete-vim-lsp'
 else
 " Plug 'Shougo/deoplete.nvim'
 " Plug 'roxma/nvim-yarp'
@@ -42,6 +47,9 @@ Plug 'Raimondi/delimitMate'
 
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
+
+Plug '/usr/local/opt/fzf'
+Plug 'junegunn/fzf.vim'
 " Initialize plugin system
 call plug#end()
 
@@ -69,9 +77,9 @@ let g:rustfmt_autosave = 1
 
 " ultisnips {{{
 " Trigger configuration. Do not use <tab> if you use https://github.com/Valloric/YouCompleteMe.
-let g:UltiSnipsExpandTrigger='<tab>'
-let g:UltiSnipsJumpForwardTrigger='<tab>'
-let g:UltiSnipsJumpBackwardTrigger='<s-tab>'
+"let g:UltiSnipsExpandTrigger='<tab>'
+"let g:UltiSnipsJumpForwardTrigger='<tab>'
+"let g:UltiSnipsJumpBackwardTrigger='<s-tab>'
 " }}}
 
 " vimtex {{{

@@ -2,12 +2,12 @@
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
 # Path to your oh-my-zsh installation.
-export ZSH="~/.oh-my-zsh"
+export ZSH="$HOME/.oh-my-zsh"
 
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
 # to know which specific one was loaded, run: echo $RANDOM_THEME
-# See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
+# See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
 # ZSH_THEME="ys"
 ZSH_THEME="cloud"
 
@@ -73,6 +73,7 @@ plugins=(git)
 plugins+=(zsh-nvm)
 plugins+=(sudo)
 plugins+=(z)
+plugins+=(fzf)
 #plugins+=(docker)
 
 source $ZSH/oh-my-zsh.sh
@@ -102,5 +103,22 @@ source $ZSH/oh-my-zsh.sh
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
-
 alias vi='nvim'
+
+# fzf
+# [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
+# git flow
+source $HOME/.completion/git-flow-completion.zsh
+
+# docker-machine
+fpath=($HOME/.zsh/completion $fpath)
+autoload -Uz compinit && compinit -i
+
+# JAVA_HOME
+export JAVA_HOME="$HOME/.sdkman/candidates/java/current"
+
+#THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
+export SDKMAN_DIR="/Users/xiaomc/.sdkman"
+[[ -s "/Users/xiaomc/.sdkman/bin/sdkman-init.sh" ]] && source "/Users/xiaomc/.sdkman/bin/sdkman-init.sh"
+
