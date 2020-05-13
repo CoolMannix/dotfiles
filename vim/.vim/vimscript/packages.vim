@@ -19,12 +19,15 @@ Plug 'Xuyuanp/nerdtree-git-plugin', {'on': 'NERDTreeToggle'}
 Plug 'ybian/smartim'
 
 Plug 'easymotion/vim-easymotion'
-Plug 'SirVer/ultisnips'
-Plug 'honza/vim-snippets'
 Plug 'rust-lang/rust.vim'
 Plug 'majutsushi/tagbar'
 Plug 'lervag/vimtex'
 Plug 'leafgarland/typescript-vim'
+if has('nvim')
+    Plug 'SirVer/ultisnips'
+    Plug 'honza/vim-snippets'
+else
+endif
 " auto ctags
 " Plug 'ludovicchabant/vim-gutentags'
 
@@ -77,9 +80,11 @@ let g:rustfmt_autosave = 1
 
 " ultisnips {{{
 " Trigger configuration. Do not use <tab> if you use https://github.com/Valloric/YouCompleteMe.
-"let g:UltiSnipsExpandTrigger='<tab>'
-"let g:UltiSnipsJumpForwardTrigger='<tab>'
-"let g:UltiSnipsJumpBackwardTrigger='<s-tab>'
+if has('nvim')
+    let g:UltiSnipsExpandTrigger='<tab>'
+    let g:UltiSnipsJumpForwardTrigger='<tab>'
+    let g:UltiSnipsJumpBackwardTrigger='<s-tab>'
+endif
 " }}}
 
 " vimtex {{{
