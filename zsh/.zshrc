@@ -74,7 +74,9 @@ plugins+=(zsh-nvm)
 plugins+=(sudo)
 plugins+=(z)
 plugins+=(fzf)
-#plugins+=(docker)
+plugins+=(docker)
+plugins+=(zsh-autosuggestions)
+plugins+=(zsh-syntax-highlighting)
 
 source $ZSH/oh-my-zsh.sh
 
