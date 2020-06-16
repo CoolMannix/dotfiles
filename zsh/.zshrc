@@ -70,11 +70,12 @@ ZSH_THEME="cloud"
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(git)
-plugins+=(zsh-nvm)
 plugins+=(sudo)
 plugins+=(z)
+# fzf和vi-mode冲突
 plugins+=(fzf)
 plugins+=(docker)
+plugins+=(zsh-nvm)
 plugins+=(zsh-autosuggestions)
 plugins+=(zsh-syntax-highlighting)
 
