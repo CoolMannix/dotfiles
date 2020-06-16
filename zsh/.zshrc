@@ -1,18 +1,22 @@
-export ZSH="$HOME/.oh-my-zsh"
+source $HOME/antigen/antigen.zsh
 
-ZSH_THEME="cloud"
+# Load the oh-my-zsh's library.
+antigen use oh-my-zsh
 
-lugins=(git)
-plugins+=(sudo)
-plugins+=(z)
+# Bundles from the default repo (robbyrussell's oh-my-zsh).
+antigen bundle git
+antigen bundle sudo
+antigen bundle z
 # fzf和vi-mode冲突
-plugins+=(fzf)
-plugins+=(docker)
-plugins+=(zsh-nvm)
-plugins+=(zsh-autosuggestions)
-plugins+=(zsh-syntax-highlighting)
+antigen bundle fzf
+antigen bundle docker
 
-source $ZSH/oh-my-zsh.sh
+antigen bundle lukechilds/zsh-nvm
+antigen bundle zsh-users/zsh-autosuggestions
+antigen bundle zsh-users/zsh-syntax-highlighting
+
+antigen theme cloud
+antigen apply
 
 # User configuration
 alias vi='nvim'
