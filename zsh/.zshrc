@@ -10,6 +10,7 @@ antigen bundle z
 # fzf和vi-mode冲突
 antigen bundle fzf
 antigen bundle docker
+antigen bundle docker-machine
 
 antigen bundle lukechilds/zsh-nvm
 antigen bundle zsh-users/zsh-autosuggestions
@@ -21,10 +22,6 @@ antigen apply
 
 # User configuration
 alias vi='nvim'
-
-# docker-machine
-fpath=($HOME/.zsh/completion $fpath)
-autoload -Uz compinit && compinit -i
 
 # JAVA_HOME
 export JAVA_HOME="$HOME/.sdkman/candidates/java/current"
