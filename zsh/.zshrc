@@ -13,6 +13,7 @@ antigen bundle docker
 
 antigen bundle lukechilds/zsh-nvm
 antigen bundle zsh-users/zsh-autosuggestions
+antigen bundle zsh-users/zsh-completions
 antigen bundle zsh-users/zsh-syntax-highlighting
 
 antigen theme cloud
@@ -20,12 +21,6 @@ antigen apply
 
 # User configuration
 alias vi='nvim'
-
-# fzf
-# [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
-
-# git flow
-source $HOME/.completion/git-flow-completion.zsh
 
 # docker-machine
 fpath=($HOME/.zsh/completion $fpath)
