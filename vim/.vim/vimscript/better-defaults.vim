@@ -141,7 +141,7 @@ autocmd FileType python set tabstop=4 shiftwidth=4 expandtab ai
 autocmd FileType ruby set tabstop=2 shiftwidth=2 softtabstop=2 expandtab ai
 autocmd BufRead,BufNew *.md,*.mkd,*.markdown  set filetype=markdown.mkd
 
-autocmd BufNewFile *.sh,*.py exec ":call AutoSetFileHead()"
+autocmd FileType sh,python exec ":call AutoSetFileHead()"
 function! AutoSetFileHead()
     echom &filetype
     " .sh
