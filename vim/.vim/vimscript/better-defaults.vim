@@ -143,7 +143,6 @@ autocmd BufRead,BufNew *.md,*.mkd,*.markdown  set filetype=markdown.mkd
 
 autocmd FileType sh,python exec ":call AutoSetFileHead()"
 function! AutoSetFileHead()
-    echom &filetype
     " .sh
     if &filetype == 'sh'
         call setline(1, "\#!/bin/bash")
