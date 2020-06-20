@@ -112,3 +112,12 @@ let g:airline#extensions#tabline#formatter = 'default'
 
 let g:airline_theme='molokai'
 " }}}
+
+" lsp {{{
+noremap ldc :LspDeclaration<CR>
+noremap ldf :LspDefinition<CR>
+noremap lh :LspHover<CR>
+noremap ls :LspImplementation<CR>
+noremap lne :LspNextError<CR>
+noremap lpe :LspPreviousError<CR>
+"g }}}
