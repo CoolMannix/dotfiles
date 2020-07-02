@@ -136,12 +136,16 @@ set laststatus=2   " Always show the status line - use 2 lines for the status ba
 
 " ============================ specific file type ===========================
 
-autocmd FileType vim set foldmethod=marker
-autocmd FileType python set tabstop=4 shiftwidth=4 expandtab ai
-autocmd FileType ruby set tabstop=2 shiftwidth=2 softtabstop=2 expandtab ai
-autocmd BufRead,BufNew *.md,*.mkd,*.markdown  set filetype=markdown.mkd
+augroup FileTypeGroup
+    autocmd!
+    autocmd FileType vim set foldmethod=marker
+    autocmd FileType python set tabstop=4 shiftwidth=4 expandtab ai
+    autocmd FileType ruby set tabstop=2 shiftwidth=2 softtabstop=2 expandtab ai
+    " autocmd BufRead,BufNew *.md,*.mkd,*.markdown  set filetype=markdown.mkd
 
-autocmd FileType sh,python exec ":call AutoSetFileHead()"
+    autocmd FileType sh,python exec ":call AutoSetFileHead()"
+    autocmd FileType c,cpp,java,go,php,javascript,puppet,python,rust,twig,xml,yml,perl autocmd BufWritePre <buffer> :call <SID>StripTrailingWhitespaces()
+augroup END
 function! AutoSetFileHead()
     " .sh
     if &filetype == 'sh'
@@ -159,7 +163,6 @@ function! AutoSetFileHead()
     normal o
 endfunc
 
-autocmd FileType c,cpp,java,go,php,javascript,puppet,python,rust,twig,xml,yml,perl autocmd BufWritePre <buffer> :call <SID>StripTrailingWhitespaces()
 fun! <SID>StripTrailingWhitespaces()
     let l = line(".")
     let c = col(".")

@@ -21,8 +21,14 @@ Plug 'ybian/smartim'
 Plug 'easymotion/vim-easymotion'
 Plug 'rust-lang/rust.vim'
 Plug 'majutsushi/tagbar'
-Plug 'lervag/vimtex'
 Plug 'leafgarland/typescript-vim'
+
+" text plugin
+" Plug 'lervag/vimtex'
+
+Plug 'godlygeek/tabular' "必要插件，安装在vim-markdown前面
+Plug 'plasticboy/vim-markdown'
+Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install() }, 'for': ['markdown', 'vim-plug']}
 if has('nvim')
     Plug 'SirVer/ultisnips'
     Plug 'honza/vim-snippets'
@@ -44,7 +50,7 @@ else
 " Plug 'roxma/vim-hug-neovim-rpc'
 endif
 
-Plug 'dense-analysis/ale'
+" Plug 'dense-analysis/ale'
 
 Plug 'Raimondi/delimitMate'
 
@@ -65,9 +71,12 @@ nmap ga <Plug>(EasyAlign)
 
 " nerdtree {{{
 map <C-n> :NERDTreeToggle<CR>
-autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
-autocmd StdinReadPre * let s:std_in=1
-autocmd VimEnter * if argc() == 1 && isdirectory(argv()[0]) && !exists("s:std_in") | exe 'NERDTree' argv()[0] | wincmd p | ene | exe 'cd '.argv()[0] | endif
+augroup NERDTreeGroup
+    autocmd!
+    autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
+    autocmd StdinReadPre * let s:std_in=1
+    autocmd VimEnter * if argc() == 1 && isdirectory(argv()[0]) && !exists("s:std_in") | exe 'NERDTree' argv()[0] | wincmd p | ene | exe 'cd '.argv()[0] | endif
+augroup END
 " }}}
 
 " tarbar {{{
@@ -88,11 +97,11 @@ endif
 " }}}
 
 " vimtex {{{
-let g:tex_flavor='latex'
-let g:vimtex_view_method='zathura'
-let g:vimtex_quickfix_mode=0
-set conceallevel=1
-let g:tex_conceal='abdmg'
+"let g:tex_flavor='latex'
+"let g:vimtex_view_method='zathura'
+"let g:vimtex_quickfix_mode=0
+"set conceallevel=1
+"let g:tex_conceal='abdmg'
 " }}}
 
 " deoplete {{{
