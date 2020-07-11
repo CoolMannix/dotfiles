@@ -123,10 +123,15 @@ let g:airline_theme='molokai'
 " }}}
 
 " lsp {{{
-noremap ldc :LspDeclaration<CR>
-noremap ldf :LspDefinition<CR>
-noremap lh :LspHover<CR>
-noremap ls :LspImplementation<CR>
-noremap lne :LspNextError<CR>
-noremap lpe :LspPreviousError<CR>
-"g }}}
+noremap <Leader>dc :LspDeclaration<CR>
+noremap <Leader>df :LspDefinition<CR>
+noremap <Leader>h :LspHover<CR>
+noremap <Leader>s :LspImplementation<CR>
+noremap <Leader>ne :LspNextError<CR>
+noremap <Leader>pe :LspPreviousError<CR>
+" }}}
+
+"fzf{{{
+noremap <Leader>f :Files<CR>
+noremap <Leader>b :Buffers<CR>
+"}}}
