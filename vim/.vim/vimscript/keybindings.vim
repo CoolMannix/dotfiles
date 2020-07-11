@@ -1,9 +1,9 @@
 " ============================ key map ============================
 
-nnoremap k gk
-nnoremap gk k
-nnoremap j gj
-nnoremap gj j
+"nnoremap k gk
+"nnoremap gk k
+"nnoremap j gj
+"nnoremap gj j
 
 map <C-j> <C-W>j
 map <C-k> <C-W>k
@@ -31,13 +31,13 @@ nnoremap <leader>w :w<CR>
 map <Leader>sa ggVG"
 
 " remap U to <C-r> for easier redo
-nnoremap U <C-r>
+" nnoremap U <C-r>
 
 " Swap implementations of ` and ' jump to markers
 " By default, ' jumps to the marked line, ` jumps to the marked line and
 " column, so swap them
-nnoremap ' `
-nnoremap ` '
+" nnoremap ' `
+" nnoremap ` '
 
 " switch # *
 " nnoremap # *
@@ -94,6 +94,18 @@ map <Left> <Nop>
 map <Right> <Nop>
 map <Up> <Nop>
 map <Down> <Nop>
+
+" custom
+inoremap <Leader><C-u> <Esc>viwUi
+nnoremap <Leader><C-u> viwU
+
+nnoremap <Leader>ev :vsplit $MYVIMRC<CR>
+nnoremap <Leader>sv :source $MYVIMRC<CR>
+
+nnoremap <Leader>" viw<Esc>a"<Esc>hbi"<Esc>lel
+nnoremap <Leader>' viw<Esc>a'<Esc>hbi'<Esc>lel
+vnoremap <Leader>" <Esc>`>a"<Esc>`<i"<Esc>
+vnoremap <Leader>' <Esc>`>a'<Esc>`<i'<Esc>
 
 " 针对neovim的处理
 if has('nvim')
