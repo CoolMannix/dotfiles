@@ -1,3 +1,7 @@
+" leader
+let mapleader = ','
+let g:mapleader = ','
+
 " ============================ key map ============================
 
 "nnoremap k gk

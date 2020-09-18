@@ -1,7 +1,3 @@
-" leader
-let mapleader = ','
-let g:mapleader = ','
-
 set encoding=utf-8
 
 " syntax
@@ -121,17 +117,17 @@ endif
 " ============================ theme and status line ============================
 
 " theme
-set background=dark
-colorscheme desert
+" set background=dark
+" colorscheme desert
 
 " set mark column color
-hi! link SignColumn   LineNr
-hi! link ShowMarksHLl DiffAdd
-hi! link ShowMarksHLu DiffChange
+" hi! link SignColumn   LineNr
+" hi! link ShowMarksHLl DiffAdd
+" hi! link ShowMarksHLu DiffChange
 
 " status line
-set statusline=%<%f\ %h%m%r%=%k[%{(&fenc==\"\")?&enc:&fenc}%{(&bomb?\",BOM\":\"\")}]\ %-14.(%l,%c%V%)\ %P
-set laststatus=2   " Always show the status line - use 2 lines for the status bar
+" set statusline=%<%f\ %h%m%r%=%k[%{(&fenc==\"\")?&enc:&fenc}%{(&bomb?\",BOM\":\"\")}]\ %-14.(%l,%c%V%)\ %P
+" set laststatus=2   " Always show the status line - use 2 lines for the status bar
 
 
 " ============================ specific file type ===========================
