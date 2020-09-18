@@ -18,3 +18,6 @@ autocmd InsertEnter * highlight  Cursor guibg=#00AAFF;
 " Revert Color to default when leaving Insert Mode
 autocmd InsertLeave * highlight  CursorLine guibg=#3E3D32
 autocmd InsertLeave * highlight  Cursor guibg=#A6E22E;
+
+iabbrev @@ xiaomc@appest.com
+iabbrev ccopy Copyright 2020 xiaomc, all rights reserved.
