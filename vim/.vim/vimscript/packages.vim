@@ -60,7 +60,11 @@ Plug 'vim-airline/vim-airline-themes'
 Plug '/usr/local/opt/fzf'
 Plug 'junegunn/fzf.vim'
 " Initialize plugin system
+"
+" Theme
+Plug 'sickill/vim-monokai'
 call plug#end()
+colo monokai
 
 " vim-easy-align {{{
 " Start interactive EasyAlign in visual mode (e.g. vipga)
