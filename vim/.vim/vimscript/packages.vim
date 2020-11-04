@@ -29,6 +29,8 @@ Plug 'leafgarland/typescript-vim'
 Plug 'godlygeek/tabular' "必要插件，安装在vim-markdown前面
 Plug 'plasticboy/vim-markdown'
 Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install() }, 'for': ['markdown', 'vim-plug']}
+
+" Plug 'zxqfl/tabnine-vim'
 if has('nvim')
     Plug 'SirVer/ultisnips'
     Plug 'honza/vim-snippets'

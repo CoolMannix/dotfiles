@@ -23,6 +23,9 @@ antigen apply
 # User configuration
 alias vi='nvim'
 
+# rbenv
+eval "$(rbenv init -)"
+
 # JAVA_HOME
 export JAVA_HOME="$HOME/.sdkman/candidates/java/current"
 
