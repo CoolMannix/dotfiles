@@ -15,3 +15,6 @@ tmux/.tmux/plugins/tmux-continuum/
 tmux/.tmux/plugins/tmux-sensible/
 tmux/.tmux/plugins/tpm/
 tmux/.tmux/resurrect/
+
+.DS_Store
+
